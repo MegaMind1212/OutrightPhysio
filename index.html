@@ -24,8 +24,81 @@
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
+
+
+
+
+
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Your additional styles go here -->
+
+
   <style>
+
+  /* Custom styles for FAQ section */
+.faq-list {
+  list-style: none;
+  padding: 0;
+}
+
+.question-container {
+  background: linear-gradient(to left, #559af3, #1462f3, #559af3);
+  box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.question {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.question:focus {
+  outline: none;
+}
+
+.question:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.collapse.show {
+  display: block;
+}
+
+.faq-list p {
+  margin-bottom: 0;
+  padding: 15px;
+}
+
+  /* Add your custom styles here */
+  .swiper-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+
+  .swiper-slide {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  height: 560px; /* Set a fixed height for the cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
   body {
       margin: 0;
       padding: 0;
@@ -73,8 +146,47 @@
           transform: translateX(-100%);
       }
   }
-</style>
 
+  /* Styles for the "Why Choose Us" section */
+#whyChooseUsSection {
+    background-color: #3498db;
+    color: #fff;
+    padding: 50px 0; /* Add padding above and below */
+    text-align: center;
+    margin-bottom: 30px; /* Add margin above the section */
+}
+
+.testimonial-caption {
+    max-width: 800px; /* Set a maximum width for the content */
+    margin: 0 auto; /* Center the content */
+}
+
+.testimonial-top-cap img {
+    max-width: 100%;
+}
+
+
+
+#whyChooseUsSection p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px; /* Add margin between paragraphs */
+     color: white; /* Change text color to white */
+}
+
+.all-starups-area {
+    background-size: contain; /* Make the background image contain within the element */
+    background-repeat: repeat-x; /* Repeat the background image horizontally */
+}
+
+.starups {
+    max-width: 100%; /* Make sure the content doesn't exceed the viewport width */
+    margin: 0 auto; /* Center the content */
+    padding: 50px; /* Adjust the padding as needed */
+}
+
+
+</style>
 
 </head>
 <body>
@@ -100,7 +212,7 @@
                     <div class="col-xl-2 col-lg-2 col-md-1">
                         <div class="logo">
                             <!--<a href="index.html"><img src="assets/img/logo/logoSAK.png" alt=""></a>-->
-                            <img src="assets/img/logo/logoSAK.png" alt="#" style="width: 120px; height: auto;">
+                            <img src="assets/img/logo/logosak.png" alt="#" style="width: 120px; height: auto;">
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-10 col-md-10">
@@ -111,21 +223,22 @@
                                     <ul id="navigation">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="#about">About</a></li>
-                                        <li><a href="doctor.html">Doctors</a></li>
-                                        <li><a href="department.html">Department</a></li>
+                                        <li><a href="#doctors">Doctors</a></li>
+                                        <li><a href="#departments">Department</a></li>
+                                        <li><a href="#contacts">Contact</a></li>
                                         <li><a href="blog.html">Blog</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
+
                                                 <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
+
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
+
                                     </ul>
                                 </nav>
                             </div>
                             <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                                <a href="#" class="btn header-btn">Contact Us</a>
+                                <a href="https://wa.link/rcgzwm" class="btn header-btn">Contact Us</a>
                             </div>
                         </div>
                     </div>
@@ -144,7 +257,7 @@
   <div class="slider-area position-relative">
       <div class="slider-active">
           <!-- Single Slider -->
-          <div class="single-slider slider-height d-flex align-items-center" style="background-image: url('assets/img/hero/hero.png');">
+          <div class="single-slider slider-height d-flex align-items-center" style="background-image: url('assets/img/hero/heroo.png');">
               <div class="container">
                   <div class="row">
                       <div class="col-xl-7 col-lg-9 col-md-8 col-sm-9">
@@ -158,7 +271,7 @@
                                   </strong>
                               </h1>
                               <p data-animation="fadeInLeft" data-delay="0.1s">Restoring lives through tailored physiotherapy expertise and a steadfast commitment to your holistic well-being!</p>
-                              <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.5s">Contact Us <i class="ti-arrow-right"></i></a>
+                              <a href="https://wa.link/rcgzwm" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.5s">DM Us <i class="ti-arrow-right"></i></a>
                           </div>
                       </div>
                   </div>
@@ -179,7 +292,9 @@
                                   </strong>
                               </h1>
                               <p data-animation="fadeInLeft" data-delay="0.1s">Restoring lives through tailored physiotherapy expertise and a steadfast commitment to your holistic well-being!</p>
-                              <a href="#" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.5s">Contact Us <i class="ti-arrow-right"></i></a>
+                              <a href="https://wa.link/rcgzwm" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.5s">DM Us <i class="ti-arrow-right"></i></a>
+
+
                           </div>
                       </div>
                   </div>
@@ -200,9 +315,9 @@
                             <span>About OUTRIGHT PHYSIO</span>
                             <h2>Pioneering Excellence in Holistic Healthcare</h2>
                         </div>
-                        <p>OutRight Physio stands as a beacon of excellence in the realm of physiotherapy, setting new standards for holistic healthcare and recovery. As a brand committed to guiding individuals on a journey to optimal well-being, OutRight Physio embodies its name with a resolute commitment to achieving outstanding results. The word "OutRight" reflects the brand's unwavering dedication to providing comprehensive and outright solutions for individuals seeking top-notch physiotherapy services. Every aspect of the brand, from its state-of-the-art facilities to its highly skilled and compassionate practitioners, aligns seamlessly with the promise of going above and beyond in the pursuit of health and vitality.</p>
+                        <p>Welcome to our home visit physiotherapy service! Our physiotherapists are dedicated to bringing personalized care to the comfort of your home. Whether you're recovering from an injury, managing a chronic condition, or seeking preventive care, our team is here to support you.</p>
 
-                        <p>At OutRight Physio, the focus extends beyond merely addressing symptoms; it encompasses a profound understanding of each individual's unique needs. The brand's personalized approach to care ensures that every client receives tailored treatment plans designed to yield outright improvements in their health and quality of life. The OutRight Physio experience is characterized by a harmonious blend of cutting-edge techniques, compassionate care, and a commitment to empowering clients to reclaim control over their physical well-being. As the epitome of excellence in physiotherapy, OutRight Physio stands as a trusted partner on the journey to a healthier, more fulfilling life.</p>
+
 
                     </div>
                 </div>
@@ -210,10 +325,10 @@
                     <!-- about-img -->
                     <div class="about-img ">
                         <div class="about-font-img d-none d-lg-block">
-                            <img src="assets/img/gallery/about2.png" alt="">
+                            <img src="assets/img/logo/logosak.png" alt="">
                         </div>
                         <div class="about-back-img ">
-                          <img src="assets/img/gallery/about12.jpeg" alt="" width="100%" height="700">
+                          <!--<img src="assets/img/logo/heroo.png" alt="" width="100%" height="700">-->
 
                         </div>
                     </div>
@@ -226,67 +341,73 @@
     <div id="blueStrip">
 
     <div id="services">
-        <span>Service 1</span>
+        <span>Assessment and Evaluation</span>
         <span>.</span>
-        <span>Service 2</span>
+        <span>Personalized Treatment Plans</span>
         <span>.</span>
-        <span>Service 3</span>
+        <span>Pain Management</span>
         <span>.</span>
-        <span>Service 4</span>
+        <span>Mobility Enhancement</span>
         <span>.</span>
-        <span>Service 5</span>
+        <span>Post-Surgery Rehabilitation</span>
         <span>.</span>
+        <span>Ergonomical changes </span>
         <!-- Duplicate service spans for continuous loop -->
-        <span>Sports Rehabilitation</span>
+        <span>Assessment and Evaluation</span>
         <span>.</span>
-        <span>Geriatric Care</span>
+        <span>Personalized Treatment Plans</span>
         <span>.</span>
-        <span>Vestibular Therapy</span>
+        <span>Pain Management</span>
         <span>.</span>
-        <span>Myofascial Release</span>
+        <span>Mobility Enhancement</span>
         <span>.</span>
-        <span>Cardiopulmonary Rehab</span>
+        <span>Post-Surgery Rehabilitation</span>
         <span>.</span>
+        <span>Ergonomical changes </span>
         <!-- Add more service spans as needed -->
-        <span>Service 1</span>
+        <span>Assessment and Evaluation</span>
         <span>.</span>
-        <span>Service 2</span>
+        <span>Personalized Treatment Plans</span>
         <span>.</span>
-        <span>Service 3</span>
+        <span>Pain Management</span>
         <span>.</span>
-        <span>Service 4</span>
+        <span>Mobility Enhancement</span>
         <span>.</span>
-        <span>Service 5</span>
+        <span>Post-Surgery Rehabilitation</span>
         <span>.</span>
+        <span>Ergonomical changes </span>
 
-        <span>Service 1</span>
+        <span>Assessment and Evaluation</span>
         <span>.</span>
-        <span>Service 2</span>
+        <span>Personalized Treatment Plans</span>
         <span>.</span>
-        <span>Service 3</span>
+        <span>Pain Management</span>
         <span>.</span>
-        <span>Service 4</span>
+        <span>Mobility Enhancement</span>
         <span>.</span>
-        <span>Service 5</span>
+        <span>Post-Surgery Rehabilitation</span>
         <span>.</span>
+        <span>Ergonomical changes </span>
 
 
     </div>
 </div>
+
+
 
 <div id="servicesContainer">
     <!-- Content goes here -->
 </div>
 
     <!--? department_area_start  -->
-    <div class="department_area section-padding2">
+    <div id="departments"class="department_area section-padding2">
         <div class="container">
             <!-- Section Tittle -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-tittle text-center mb-100">
-                        <span>Our Departments</span>
-                        <h2>Our Medical Services</h2>
+                        <span>Our Departments & Services</span>
+                        <h2>Departments</h2>
                     </div>
                 </div>
             </div>
@@ -298,37 +419,37 @@
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
                                         <!--<i class="flaticon-bone"></i>-->
-                                    <h4>Physical Rehabilitation</h4>
+                                    <h4>Cardio</h4>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
                                         <!--<i class="flaticon-bone"></i>-->
-                                    <h4>Manual Therapy</h4>
+                                    <h4>Ortho</h4>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
                                         <!--<i class="flaticon-bone"></i>-->
-                                    <h4>Pain Management</h4>
+                                    <h4>Sports Injury</h4>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="Astrology-tab" data-toggle="tab" href="#Astrology" role="tab" aria-controls="contact" aria-selected="false">
                                       <!--<i class="flaticon-bone"></i>-->
-                                    <h4>Posture Correction</h4>
+                                    <h4>Neuro</h4>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="Neuroanatomy-tab" data-toggle="tab" href="#Neuroanatomy" role="tab" aria-controls="contact" aria-selected="false">
                                         <!--<i class="flaticon-bone"></i>-->
-                                    <h4>Sports Injury Rehabilitation:</h4>
+                                    <h4>OBG</h4>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="Blood-tab" data-toggle="tab" href="#Blood" role="tab" aria-controls="contact" aria-selected="false">
                                     <!--<i class="flaticon-bone"></i>-->
-                                    <h4>Pelvic Health Physiotherapy</h4>
+                                    <h4>Geriatic</h4>
                                 </a>
                             </li>
                         </ul>
@@ -342,14 +463,20 @@
                         <div class="row align-items-center no-gutters">
                             <div class="col-lg-7">
                                 <div class="dept_info">
-                                    <h3>Services-1</h3 >
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <h3>Cardio</h3 >
+                                    <h4>•COPD</h4>
+                                    <h4>•Asthma</h4>
+                                    <h4>•Long term ICU Patient</h4>
+                                    <h4>•Arrhythmia</h4>
+                                    <h4>•Shortness of breath</h4>
+                                    <h4>•Dyspnea</h4>
+
                                     <!--<a href="#" class="dep-btn">Appointment<i class="ti-arrow-right"></i></a>-->
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="dept_thumb">
-                                    <img src="assets/img/gallery/gg.jpg" alt="">
+                                    <img src="assets/img/gallery/cardio.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -360,14 +487,36 @@
                         <div class="row align-items-center no-gutters">
                             <div class="col-lg-7">
                                 <div class="dept_info">
-                                    <h3>Services-2</h3 >
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <h3>Ortho</h3 >
+                                    <h4>• Calcaneal spur</h4>
+<h4>• Plantar Fascitis</h4>
+<h4>• Heel pain</h4>
+<h4>• OA knee</h4>
+<h4>• Fracture conditions (any joints)</h4>
+<h4>• Talonavicular Collition</h4>
+<h4>• CTEV</h4>
+<h4>• Flat foot</h4>
+<h4>• Avascular Necrosis</h4>
+<h4>• Coccydynia</h4>
+<h4>• Low back ache</h4>
+<h4>• IVDP</h4>
+<h4>• Spondylosis</h4>
+<h4>• spondylolisthesis</h4>
+<h4>• Spondylitis</h4>
+<h4>• Neck pain</h4>
+<h4>• Shoulder pain</h4>
+<h4>• Frozen shoulder</h4>
+<h4>• Trapezitis</h4>
+<h4>• Any muscle spasm</h4>
+<h4>• RA</h4>
+<h4>•cervical radiculopathy</h4>
+<h4>•Lumbar radiculopathy </h4>
 
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="dept_thumb">
-                                    <img src="assets/img/gallery/gg.jpg" alt="">
+                                    <img src="assets/img/gallery/orthoo.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -378,14 +527,29 @@
                         <div class="row align-items-center no-gutters">
                             <div class="col-lg-7">
                                 <div class="dept_info">
-                                    <h3>Services-3</h3 >
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <h3>Sport's injury</h3 >
+                                    <h4>• ACL ligament tear</h4>
+<h4>• PCL ligament tear </h4>
+<h4>• MCL ligament tear </h4>
+<h4>• Meniscus injury</h4>
+<h4>• Tennis elbow</h4>
+<h4>• Golfer's elbow</h4>
+<h4>• Ankle sprain</h4>
+<h4>• Tendinitis</h4>
+<h4>• Bursitis</h4>
+<h4>• Deltoid tear</h4>
+<h4>• Rotator cough injury</h4>
+<h4>• Impinchment</h4>
+<h4>• Runner's knee</h4>
+<h4>• Shinsplint </h4>
+<h4>• Achilles tendinitis</h4>
+<h4>• sport's rehabilitation </h4>
 
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="dept_thumb">
-                                    <img src="assets/img/gallery/gg.jpg" alt="">
+                                    <img src="assets/img/gallery/sports.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -396,14 +560,35 @@
                         <div class="row align-items-center no-gutters">
                             <div class="col-lg-7">
                                 <div class="dept_info">
-                                    <h3>Services-4</h3 >
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <h3>Neuro</h3 >
+                                    <h4>• Stroke</h4>
+<h4>• Hemiplegia</h4>
+<h4>• Hemiparesis</h4>
+<h4>• GB's </h4>
+<h4>• Multiple Sclerosis</h4>
+<h4>• Transverse Myelitis</h4>
+<h4>• CP</h4>
+<h4>• Fibromyalgia</h4>
+<h4>• Head injury</h4>
+<h4>• Muscular Distrophy</h4>
+<h4>• Parkinson's</h4>
+<h4>• Nerve injury</h4>
+<h4>• Sciatica</h4>
+<h4>• Motor neuron disease</h4>
+<h4>• Paralysis</h4>
+<h4>• Developmental Delay</h4>
+<h4>• Varicose vein</h4>
+<h4>• Wrist drop</h4>
+<h4>• Food drop</h4>
+<h4>• Carpal tunnel syndrome</h4>
+<h4>• Bell's palsy </h4>
+<h4>• Facial palsy </h4>
 
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="dept_thumb">
-                                    <img src="assets/img/gallery/gg.jpg" alt="">
+                                    <img src="assets/img/gallery/neuro.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -414,14 +599,16 @@
                         <div class="row align-items-center no-gutters">
                             <div class="col-lg-7">
                                 <div class="dept_info">
-                                    <h3>Services-5</h3 >
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <h3>OBG</h3 >
+                                    <h4>• Antenatal Exercise</h4>
+<h4>• Prenatal Exercise </h4>
+<h4>• Postnatal Exercise </h4>
 
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="dept_thumb">
-                                    <img src="assets/img/gallery/gg.jpg" alt="">
+                                    <img src="assets/img/gallery/obg.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -432,14 +619,14 @@
                         <div class="row align-items-center no-gutters">
                             <div class="col-lg-7">
                                 <div class="dept_info">
-                                    <h3>Services-6</h3 >
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                    <h3>Geriatric conditions</h3 >
+                                    <p>Empower your golden years with our dedicated Geriatric Care. Tailored for seniors, we focus on mobility, pain management, and holistic well-being. Elevate the quality of life for your loved ones. </p>
 
                                 </div>
                             </div>
                             <div class="col-lg-5">
                                 <div class="dept_thumb">
-                                    <img src="assets/img/gallery/gg.jpg" alt="">
+                                    <img src="assets/img/gallery/Geriatric.jpg" alt="">
                                 </div>
                             </div>
                         </div>
@@ -451,10 +638,11 @@
         </div>
     </div>
     <!-- depertment area end  -->
-     <!--? Gallery Area Start -->
+    <!--
+     <!--? Gallery Area Start
      <div class="gallery-area section-padding30">
         <div class="container">
-            <!-- Section Tittle -->
+            <!-- Section Tittle --
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-tittle text-center mb-100">
@@ -464,7 +652,7 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Left -->
+                <!-- Left --
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-12">
@@ -484,7 +672,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Right -->
+                <!-- Right --
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
@@ -507,26 +695,46 @@
             </div>
         </div>
     </div>
-    <!-- Gallery Area End -->
-    <!--? All startups Start -->
+    <!-- Gallery Area End ---->
+
+    <!-- Why Choose Us Section -->
+    <div id="whyChooseUsSection">
+        <div class="testimonial-caption">
+            <div class="testimonial-top-cap">
+                <img src="assets/img/gally/testim.png" alt="">
+                <h2>Why Choose Us?</h2>
+                <p>“Convenience: Receive care in the comfort of your home, eliminating the need for travel.
+Personalized Attention: One-on-one sessions ensure focused and individualized care.
+Familiar Environment: Rehabilitation within your home environment aids in a smoother recovery.”</p>
+            </div>
+            <!-- founder -->
+            <h2>Booking Process:</h2>
+            <p>Call our dedicated line or visit our website to schedule an appointment.
+Provide basic information about your condition and location.
+Our physiotherapist will visit you at the scheduled time, equipped with necessary tools and expertise.
+Take the first step towards a healthier, more mobile you! Our home visit physiotherapy service is committed to enhancing your well-being at your convenience.</p>
+
+        </div>
+    </div>
+
+    <!--? All startups Start -
     <div class="all-starups-area testimonial-area fix">
         <!-- left Contents -->
         <div class="starups">
-            <!--? Testimonial Start -->
+            <!--? Testimonial Start --
             <div class="h1-testimonial-active">
-                <!-- Single Testimonial -->
+                <!-- Single Testimonial --
                 <div class="single-testimonial text-center">
-                    <!-- Testimonial Content -->
-                    <div class="testimonial-caption ">
+                    <!-- Testimonial Content --
+                    <div class="testimonial-caption">
                         <div class="testimonial-top-cap">
-                            <img src="assets/img/gallery/testimonial.png" alt="">
-                            <h2>What our clients Say?
+                            <h2>What our clients Say?</h2>
                             <p>“OutRight Physio has been a game-changer in my health journey. The personalized care and attention to detail provided by their team are truly outstanding. The skilled practitioners not only addressed my specific physiotherapy needs but also empowered me with the knowledge to maintain a healthy and active lifestyle.”</p>
                         </div>
-                        <!-- founder -->
+                        <!-- founder --
                         <div class="testimonial-founder d-flex align-items-center justify-content-center">
                             <div class="founder-img">
-                                <img src="assets/img/gallery/Homepage_testi.png" alt="">
+                                <!-- Removed the image tag --
                             </div>
                             <div class="founder-text">
                                 <span>Margaret Lawson</span>
@@ -536,140 +744,246 @@
                     </div>
                 </div>
             </div>
-            <!-- Testimonial End -->
+            <!-- Testimonial End --
         </div>
-        <!--Right Contents  -->
+        <!--Right Contents --
         <div class="starups-img"></div>
     </div>
     <!--All startups End -->
-     <!--? Team Start -->
-     <div class="team-area section-padding30">
-        <div class="container">
-            <!-- Section Tittle -->
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-tittle text-center mb-100">
-                        <span>Our Doctors</span>
-                        <h2>Our Specialist</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- single Tem -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/img/gallery/team2.png" alt="">
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="#">Alvin Maxwell</a></h3>
-                            <span>Creative UI Designer</span>
-                            <!-- Team social -->
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/img/gallery/team3.png" alt="">
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="#">Maria Smith</a></h3>
-                            <span>Agency Manager</span>
-                            <!-- Team social -->
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--<div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
-                    <div class="single-team mb-30">
-                        <div class="team-img">
-                            <img src="assets/img/gallery/team1.png" alt="">
-                        </div>
-                        <div class="team-caption">
-                            <h3><a href="#">Angela Doe</a></h3>
-                            <span>Designer</span>
-                            <!-- Team social -
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-     <!--? Contact form Start -->
-     <div class="contact-form-main">
-        <div class="container">
-            <div class="row justify-content-end">
-                <div class="col-xl-7 col-lg-7">
-                    <div class="form-wrapper">
-                        <!--Section Tittle  -->
-                        <div class="form-tittle">
-                            <div class="row ">
-                                <div class="col-xl-12">
-                                    <div class="section-tittle section-tittle2">
-                                        <span>Appointment Apply Form</span>
-                                        <h2>Appointment Form</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End Section Tittle  -->
-                        <form id="contact-form" action="#" method="POST">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-box user-icon mb-30">
-                                        <input type="text" name="name" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-box email-icon mb-30">
-                                        <input type="text" name="email" placeholder="Phone">
-                                    </div>
-                                </div>
 
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form-box subject-icon mb-30">
-                                        <input type="Email" name="subject" placeholder="Email">
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="form-box message-icon mb-65">
-                                        <textarea name="message" id="message" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="submit-info">
-                                        <button class="btn" type="submit">Submit Now <i class="ti-arrow-right"></i> </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+    <!-- Add this script tag to include Swiper.js -->
+
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="container">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+          <!-- Section Tittle -->
+          <div class="row justify-content-center">
+              <div class="col-lg-6">
+                  <div class="section-tittle text-center mb-100">
+                      <span>Our Testimonial </span>
+                      <h2>What Our Clients Say?</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="carousel-inner">
+
+              <!-- Testimonials Section -->
+              <div id="testimonials" class="container">
+                  <div class="swiper-container">
+                      <div class="swiper-wrapper">
+
+                          <!-- Testimonial 1 -->
+                          <div class="swiper-slide">
+                              <h2>What our clients Say?</h2>
+                              <p>“I have been recently diagnosed with some sort of bone effusion in my right leg ankle (calcaneonavicular coalition) which had been extremely painful and at times wouldn't even allow me to step/walk. Doctors advised me to undergo a surgery on a long term and suggested few exercises to avoid pain ..Read More ”</p>
+                              <div class="testimonial-founder">
+
+                                  <div class="founder-text">
+                                      <p style="margin-bottom: 10px;">  </p>
+                                      <h3>Shashidhar Jetti</h3>
+                                      <a href="https://www.google.com/maps/reviews/data=!4m8!14m7!1m6!2m5!1sChZDSUhNMG9nS0VJQ0FnSUMtaElyamFBEAE!2m1!1s0x0:0xa65d2d9b2b91d174!3m1!1s2@1:CIHM0ogKEICAgIC-hIrjaA%7CCgsIk9DnmgYQsIHBIA%7C?hl=en-US" target="_blank" style="text-decoration: underline; color: blue;">Read more on Google Reviews</a>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Testimonial 2 -->
+                          <div class="swiper-slide">
+                              <h2>What our clients Say?</h2>
+                              <p>Feeling very happy while sharing this review since my father was in critical condition (unable to sit or walk)when we met Yathinraj but he handled the situation very well and effortlessly that gave the push and confidence to my father to sit and try to take few steps further. Of course, the journey was not easy but with his help,...Read More</p>
+                              <div class="testimonial-founder">
+
+                                  <div class="founder-text">
+                                      <p style="margin-bottom: 10px;">  </p>
+                                      <h3>Vivek Sharma</h3>
+                                      <a href="https://g.co/kgs/4gBKJ4L" target="_blank" style="text-decoration: underline; color: blue;">Read more on Google Reviews</a>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Testimonial 3 -->
+                          <div class="swiper-slide">
+                              <h2>What our clients Say?</h2>
+                              <p>I got physiotherapy done by Dr. Sakshi Koli and I am highly satisfied with the sessions Dr. conducted for my knee issue. Dr. has this unique ability to engage with the patient so very well and keep him or her informed about the purpose of treatment and how the treatment is progressing.  Overall the experience was very good.</p>
+                              <div class="testimonial-founder">
+
+                                  <div class="founder-text">
+                                      <p style="margin-bottom: 10px;">  </p>
+                                      <h3>Rajesh Jade</h3>
+                                      <a href="https://g.co/kgs/KqAjkYT" target="_blank" style="text-decoration: underline; color: blue;">Read more on Google Reviews</a>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Testimonial 4 -->
+                          <div class="swiper-slide">
+                              <h2>What our clients Say?</h2>
+                              <p>Dr. Sakshi is very nice and takes time to understand my problem and listen. She is very knowledgeable in her work. I have improved a lot and very helpful. Overall experience was very good. I would highly recommend your practice to anyone. Thank you.</p>
+                              <div class="testimonial-founder">
+
+                                  <div class="founder-text">
+                                      <p style="margin-bottom: 10px;">  </p>
+                                      <h3>Shobha Narayan</h3>
+                                      <a href="https://g.co/kgs/MkcVbFc" target="_blank" style="text-decoration: underline; color: blue;">Read more on Google Reviews</a>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- Add more testimonials as needed -->
+
+                  </div>
+
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+
+                  <!-- Add Navigation --
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>
+
+              <!-- Add Swiper JS -->
+              <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+              <!-- Initialize Swiper -->
+              <script>
+                  var swiper = new Swiper('.swiper-container', {
+                      slidesPerView: 1,
+                      spaceBetween: 30,
+                      pagination: {
+                          el: '.swiper-pagination',
+                          clickable: true,
+                      },
+                      navigation: {
+                          nextEl: '.swiper-button-next',
+                          prevEl: '.swiper-button-prev',
+                      },
+                  });
+              </script>
+          </div>
+
+
+
+
+
+
+<!--? Team Start -->
+<div id="doctors" class="team-area section-padding30">
+    <div class="container">
+        <!-- Section Tittle -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="section-tittle text-center mb-100">
+                    <span>Our Doctors</span>
+                    <h2>Our Specialist</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- single Team -->
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-">
+                <div class="single-team mb-30">
+                    <div class="team-img">
+                        <img src="assets/img/gallery/drsakshi.jpg" alt="">
+                    </div>
+                    <div class="team-caption">
+                      <h3><a href="#">Dr.Sakshi N Koli (P.T)</a></h3>
+                      <h4>BPT, MIAP-L57774</h4>
+                      <h4>CDNT(IHFA)</h4>
+                      <h4>Certified Cupping Therapist(APHI)</h4>
+                      <h4>pain management specialist (NHS) (Uk)</h4>
+                      <span>Founder-Outright Physio</span>
+                        <!-- Team social -->
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-">
+                <div class="single-team mb-30">
+                    <div class="team-img">
+                        <img src="assets/img/gallery/dryatinraj.jpeg" alt="">
+                    </div>
+                    <div class="team-caption">
+
+                        <h3><a href="#">Dr.Yatinraj Y. Shastry (P.T)</a></h3>
+                        <h4>BPT, MIAP-L57652</h4>
+                        <h4>CDNT(IHFA), CIASTM(IHFA)</H4>
+                        <h4>Certified Cupping Therapist(APHI)</h4>
+                        <h4>pain management specialist (NHS) (Uk)</h4>
+                        <span>Co-founder-Outright Physio</span>
+                        <!-- Team social -->
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-globe"></i></a>
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- contact left Img-->
-        <div class="from-left d-none d-lg-block">
-            <img src="assets/img/gallery/about12.jpeg" alt="">
+    </div>
+</div>
+<!-- Team End -->
+
+<!--? Contact form Start -->
+<div class="contact-form-main">
+    <div class="container">
+        <div class="row justify-content-center"> <!-- Center the form -->
+            <div class="col-xl-7 col-lg-7">
+                <div class="form-wrapper">
+                    <!--Section Tittle  -->
+                    <div class="form-tittle">
+                        <div class="row ">
+                            <div class="col-xl-12">
+                                <div class="section-tittle section-tittle2">
+                                    <span>Contact OUTRIGHT PHYSIO On Email</span>
+                                    <h2>Contact Us</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Section Tittle  -->
+                    <!-- Use mailto function for the form -->
+                    <form id="contact-form" action="mailto:outrightphysio@gmail.com" method="POST" enctype="text/plain">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box user-icon mb-30">
+                                    <input type="text" name="name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box email-icon mb-30">
+                                    <input type="text" name="phone" placeholder="Phone">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class="form-box subject-icon mb-30">
+                                    <input type="Email" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-box message-icon mb-65">
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                                <div class="submit-info">
+                                    <button class="btn" type="submit">Submit Now <i class="ti-arrow-right"></i> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- Contact form End -->
+</div>
+
     <!-- gallery Products Start --
     <div class="gallery-area fix">
         <div class="container-fluid p-0">
@@ -720,6 +1034,113 @@
         </div>
     </div>
     <!-- gallery Products End -->
+
+
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-tittle text-center mb-70">
+          <span>F.A.Qs</span>
+          <h2>Questions We are Asked Frequently</h2>
+        </div>
+
+        <ul class="faq-list">
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1"> 1.What is home physiotherapy? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Imagine personalized healing, right at your doorstep.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question"> 2.Who benefits from it? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • It's for you—recovering, managing, or just seeking comfort.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question"> 3.How to schedule a session? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Reach out, chat with us—phone, email, or a simple online click.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question"> 4.What happens during a session? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Picture this: your unique needs met, guided by caring hands and thoughtful exercises.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question"> 5.Are therapists certified? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Yes Certified with a wealth of knowledge.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question"> 6.Service areas? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Currently caring for specify Locations in central and Western lines.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq7" class="collapsed question"> 7.Can it help with chronic pain? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+              <p>yes, we specialize in soothing the persistent ache.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq8" class="collapsed question"> 8.COVID-19 safety measures? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq8" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Your safety is paramount—strict adherence to guidelines.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq9" class="collapsed question"> 9.Session duration? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq9" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Around 30-45 minutes to an hour, Depending on the condition.
+              </p>
+            </div>
+          </li>
+
+          <li class="question-container">
+            <div data-bs-toggle="collapse" href="#faq10" class="collapsed question"> 10.Cancellation/Rescheduling? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq10" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                • Yes you can give us a prior information 3 hours before the session timings, and we'll figure it out together.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section><!-- End F.A.Q Section -->
+
     <!--? Blog start -->
     <div class="home_blog-area section-padding30">
         <div class="container">
@@ -727,7 +1148,7 @@
                 <div class="cl-xl-7 col-lg-8 col-md-10">
                     <!-- Section Tittle -->
                     <div class="section-tittle text-center mb-70">
-                        <span>Oure recent news</span>
+                        <span>Our recent news</span>
                         <h2>OurNews From Blog</h2>
                     </div>
                 </div>
@@ -785,7 +1206,7 @@
     </main>
     <footer>
         <!--? Footer Start-->
-        <div class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.jpg">
+        <div id="contacts" class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.jpg">
             <div class="container">
                 <div class="footer-top footer-padding">
                     <div class="row d-flex justify-content-between">
@@ -811,12 +1232,14 @@
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-number mb-50">
-                                    <h4>+91<span> 8884866704</span></h4>
-                                    <p>drsakshikoli@gmail.com <drsakshikoli@gmail.com> </p>
+                                    <!--<h4>+91<span> 8884866704</span></h4>-->
+                                    <p>Our Email</p>
+                                    <a href="mailto:outrightphysio@gmail.com" style="font-family: 'Playfair Display', serif; font-size: 18px;">outrightphysio@gmail.com</a>
+
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form">
-    <form action="mailto:drsakshikoli@gmail.com?subject=" method="post" class="subscribe_form relative mail_part" enctype="text/plain">
+    <form action="mailto:outrightphysio@gmail.com" method="post" class="subscribe_form relative mail_part" enctype="text/plain">
         <input type="email" name="EMAIL" id="newsletter-form-email" placeholder="Email Address" class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'" required>
         <div class="form-icon">
             <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
@@ -897,6 +1320,40 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
+
+
+
+
+    <!-- Add this script tag at the end of your HTML document -->
+<script>
+    var testimonialCarousel = new bootstrap.Carousel(document.getElementById('testimonialCarousel'), {
+        interval: 5000, // Set the interval as needed
+        pause: 'hover',
+        wrap: true // Set to false if you don't want the carousel to wrap around
+    });
+</script>
+
+<!-- Add this JavaScript code just before the closing body tag of your HTML document -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Your other scripts go here -->
+<script>
+  var questions = document.querySelectorAll('.question');
+
+  questions.forEach(function (question) {
+    question.addEventListener('click', function () {
+      var answer = this.nextElementSibling;
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        this.classList.add('collapsed');
+      } else {
+        answer.style.display = 'block';
+        this.classList.remove('collapsed');
+      }
+    });
+  });
+</script>
+</body>
+
 
     </body>
 </html>

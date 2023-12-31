@@ -1,8 +1,5 @@
-Thank you for using our template!
+This Site Is designed and developed by a site development firm the media and content used is either open sourced or under Clients authority.
 
-For more awesome templates please visit https://colorlib.com/wp/templates/
+Any practices of alterations or false claims will be taken with legail procedures.
 
-Copyright information for the template can't be altered/removed unless you purchase a license.
-More information about the license is available here: https://colorlib.com/wp/licence/
-
-Removing copyright information without the license will result in suspension of your hosting and/or domain name(s).
+ 
